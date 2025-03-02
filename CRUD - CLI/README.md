@@ -15,26 +15,26 @@ O Objetivo é realizar um aprendizado contínuo a partir de uma aplicação simp
 
 ## Estrutura do Projeto
 
-CRUD-CLI/
-├── cmd/                  # Interface CLI
-│   └── main.go
-├── docker/               # Docker Configuration
-│   ├── Dockerfile        # Dockerfile para criação da imagem
-│   └── .dockerignore     # Arquivos a serem ignorados pelo Docker
-├── internal/             # Camada de Domínio e Casos de Uso
-│   ├── domain/           # Entidades
-│   │   └── item.go
-│   ├── usecase/          # Casos de Uso
-│   │   ├── item_service.go
-│   │   ├── interfaces.go
-│   │   └── item_service_test.go
-├── pkg/                  # Infraestrutura
-│   └── local/
-│       ├── repository.go
-│       ├── storage.go
-│       └── repository_test.go
-└── items.json            # Arquivo de armazenamento
-└── go.mod                # Dependências
+### CRUD-CLI/
+### ├── cmd/                  # Interface CLI
+### │   └── main.go
+### ├── docker/               # Docker Configuration
+### │   ├── Dockerfile        # Dockerfile para criação da imagem
+### │   └── .dockerignore     # Arquivos a serem ignorados pelo Docker
+### ├── internal/             # Camada de Domínio e Casos de Uso
+### │   ├── domain/           # Entidades
+### │   │   └── item.go
+### │   ├── usecase/          # Casos de Uso
+### │   │   ├── item_service.go
+### │   │   ├── interfaces.go
+### │   │   └── item_service_test.go
+### ├── pkg/                  # Infraestrutura
+### │   └── local/
+### │       ├── repository.go
+### │       ├── storage.go
+### │       └── repository_test.go
+### └── items.json            # Arquivo de armazenamento
+### └── go.mod                # Dependências
 
 
 ## Funcionalidades 
