@@ -1,0 +1,6 @@
+*.json
+*.md
+*.go
+go.sum
+go.mod
+/tests/
