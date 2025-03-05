@@ -1,8 +1,14 @@
 package main
 
-import "github.com/gin-gonic/gin"
+import (
+	"ms-categories/pkg/db"
+
+	"github.com/gin-gonic/gin"
+)
 
 func main() {
+	db.ConnectMongo()
+
 	router := gin.Default()
 
 	router.GET("/health", func(c *gin.Context) {

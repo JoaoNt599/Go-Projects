@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:6.0
+    container_name: ms-categories-mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: admin
+    ports:
+      - 27017:27017
+    volumes:
+      - mongo-data:/data/db
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ms-categories-api
+    environment:
+      MONGO_URI: mongodb://admin:admin@mongodb:27017
+    ports:
+      - 8080:8080
+    depends_on:
+      - mongodb
+    restart: always
+
+volumes:
+  mongo-data:
