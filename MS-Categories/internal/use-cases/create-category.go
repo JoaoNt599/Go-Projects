@@ -3,14 +3,17 @@ package use_cases
 import (
 	"log"
 	"ms-categories/internal/entities"
+	"ms-categories/internal/repositories"
 )
 
 type createCategoryUseCase struct {
-	// Db
+	repository repositories.ICategoryRepository
 }
 
-func NewCreateCategoryUseCase() *createCategoryUseCase {
-	return &createCategoryUseCase{}
+func NewCreateCategoryUseCase(repository repositories.ICategoryRepository) *createCategoryUseCase {
+	return &createCategoryUseCase{
+		repository: repository,
+	}
 }
 
 func (u *createCategoryUseCase) Execute(name string) error {
@@ -22,6 +25,13 @@ func (u *createCategoryUseCase) Execute(name string) error {
 
 	// TODO: persist entity to db
 	log.Println(category)
+
+	// TODO: verify id category name already exists
+	err = u.repository.Save(category)
+
+	if err != nil {
+		return err
+	}
 
 	return nil
 }
