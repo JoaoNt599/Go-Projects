@@ -32,4 +32,14 @@ body {
 .messages li {
     padding: 8px;
     border-bottom: 1px solid #ddd;
+    position: relative;
+    word-wrap: break-word;
+}
+
+.timestamp {
+    font-size: 12px;
+    color: gray;
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
 }
