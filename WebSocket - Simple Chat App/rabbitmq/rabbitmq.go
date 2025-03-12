@@ -11,7 +11,8 @@ import (
 
 // ConnectRabbitMQ connects to RabbitMQ and returns a channel
 func ConnectRabbitMQ() (*amqp.Connection, *amqp.Channel) {
-	rabbitURL := "amqp://guest:guest@rabbitmq:5672/"
+	// rabbitURL := "amqp://guest:guest@rabbitmq:5672/"
+	rabbitURL := "amqp://guest:guest@localhost:5672/"
 
 	// Attempting to connect to RabbitMQ up to 5 times
 	var conn *amqp.Connection

@@ -24,3 +24,12 @@ This repository aims to practice the implementation of websockets using the Go l
 
     go run cmd/main.go
 
+## Docker
+
+    docker-compose up -d
+
+
+## RabbitMQ Port:
+
+- http://localhost:15672
+
